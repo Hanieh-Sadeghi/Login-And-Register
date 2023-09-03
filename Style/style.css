@@ -38,13 +38,13 @@ body {
   padding: 40px;
 }
 
-.form-box h2{
+.form-box h2 {
   font-size: 2.2em;
   color: rgb(0, 88, 4);
   text-align: center;
 }
 
-.input-box{
+.input-box {
   position: relative;
   width: 100%;
   height: 50px;
@@ -60,7 +60,7 @@ body {
   font-size: 1em;
   font-weight: 500;
   pointer-events: none;
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .input-box input {
@@ -69,9 +69,37 @@ body {
   background: transparent;
   border: none;
   outline: none;
+  font-size: 1em;
+  color: red;
+  font-weight: 600;
+  padding: 0 35px 0 5px;
 }
 
-.input-box input:focus~label,
-.input-box input:valid~label{
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
   top: -5px;
+}
+
+.remember-forgot {
+  font-size: 0.9em;
+  color: red;
+  font-weight: 500;
+  margin: -15px 0 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.remember-forgot label input {
+  accent-color: rgb(102, 240, 86);
+  margin-right: 3px;
+}
+
+.remember-forgot a {
+  color: red;
+  text-decoration: none;
+}
+
+.remember-forgot a:hover{
+  text-decoration: underline;
+
 }
