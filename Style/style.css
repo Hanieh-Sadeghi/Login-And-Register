@@ -14,14 +14,13 @@
 body {
   width: 100%;
   height: 100vh;
-  /* overflow: hidden; */
   background-image: url(/Img/unsplash.jpg);
   /* background-position: center; */
   background-size: cover;
 }
 
 .container {
-  border: 1.50px solid #040D12;
+  border: 1.5px solid #040d12;
   position: relative;
   height: 450px;
   width: 400px;
@@ -31,6 +30,18 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+  transition: height 0.2s ease;
+}
+
+.form-box h2 {
+  font-size: 2.2em;
+  color: #040d12;
+  text-align: center;
+}
+
+.active {
+  height: 520px;
 }
 
 .form-box {
@@ -38,18 +49,24 @@ body {
   padding: 40px;
 }
 
-.form-box h2 {
-  font-size: 2.2em;
-  color:#040D12;
-  text-align: center;
+.container.active .form-box.login {
+  transition: transform 0.18s ease;
+  transform: translateX(-400px);
 }
 
-.form-box.login{
-  /* display:none; */
-} 
+.container.active .form-box.register {
+  transition: transform 0.18s ease;
+  transform: translateX(0);
+}
 
-.form-box.register{
+.form-box.login {
+  transition: transform 0.18s ease;
+  transform: translateX(0);
+}
+
+.form-box.register {
   position: absolute;
+  transition: transform 0.18s ease;
   transform: translateX(400px);
 }
 
@@ -57,7 +74,7 @@ body {
   position: relative;
   width: 100%;
   height: 50px;
-  border-bottom: 2px solid #040D12;
+  border-bottom: 2px solid #040d12;
   margin: 30px 0;
 }
 
@@ -79,7 +96,7 @@ body {
   border: none;
   outline: none;
   font-size: 1em;
-  color: #183D3D;
+  color: #183d3d;
   font-weight: 600;
   padding: 0 35px 0 5px;
 }
@@ -99,7 +116,7 @@ body {
 }
 
 .remember-forgot label input {
-  accent-color: #040D12;
+  accent-color: #040d12;
   margin-right: 4px;
 }
 
@@ -115,13 +132,13 @@ body {
 .btn {
   width: 100%;
   height: 45px;
-  background: linear-gradient(135deg,#183D3D 10%,  #040D12 70%);
+  background: linear-gradient(135deg, #183d3d 10%, #040d12 70%);
   border: none;
   outline: none;
   border-radius: 6px;
   cursor: pointer;
   font-size: 1em;
-  color: #93B1A6;
+  color: #93b1a6;
   font-weight: 500;
 }
 
@@ -139,6 +156,6 @@ body {
   font-weight: 600;
 }
 
-.login-register p a:hover{
+.login-register p a:hover {
   text-decoration: underline;
 }
