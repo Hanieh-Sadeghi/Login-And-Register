@@ -40,8 +40,8 @@
             <label>Username</label>
           </div>
           <div class="input-box">
-            <input type="email" required />
-            <label>Email</label>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
           </div>
           <div class="input-box">
             <input type="password" required />
@@ -49,13 +49,14 @@
           </div>
           <div class="remember-forgot">
             <label
-              ><input type="checkbox"/>Agree to the terms & Conditions</label>
+              ><input type="checkbox" />Agree to the terms & Conditions</label
+            >
           </div>
           <button type="submit" class="btn">Register</button>
           <div class="login-register">
             <p>
               Already have an account
-              <a href="#" class="login">login</a>
+              <a href="#" class="login-link">Login</a>
             </p>
           </div>
         </form>
